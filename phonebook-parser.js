@@ -10,7 +10,7 @@ const data = JSON.parse(fs.readFileSync(process.argv[2]));
 data.forEach((elem) => {
 
 	if (elem.extension.toString().length !== 4 ||
-		elem.extension >= 9000 || elem.extension < 2000) {
+		elem.extension >= 8000 || elem.extension < 2000) {
 		return;
 	}
 	
