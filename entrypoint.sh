@@ -8,6 +8,10 @@ pulseaudio --system --disallow-exit &
 counter=0
 limit=24
 
+if [ -n "$LIMIT" ]; then
+	limit=$LIMIT
+fi
+
 if [ ! -f /data/callees.txt ]; then
 	echo "ERROR: /data/callees.txt missing"
 	exit 1
